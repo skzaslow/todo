@@ -10,13 +10,15 @@
   </tr>
 
 <% @tasks.each do |task| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= task.item %></td>
     <td><%= task.created_at %></td>
 	<td><%= task.due_date %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>
+    <td class="list_actions">
+		<%= link_to 'Show', task %><br/>
+		<%= link_to 'Edit', edit_task_path(task) %><br/>
+		<%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %>
+	</td>
   </tr>
 <% end %>
 </table>
