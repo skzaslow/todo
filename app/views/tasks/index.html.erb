@@ -4,6 +4,7 @@
   <tr>
     <th>Item</th>
     <th>Date created</th>
+	<th>Description</th>
     <th>Due date</th>
     <th></th>
     <th></th>
@@ -12,6 +13,7 @@
 <% @tasks.each do |task| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td><%= task.item %></td>
+	<td><%= task.description %></td>
     <td><%= task.created_at %></td>
 	<td><%= task.due_date %></td>
     <td class="list_actions">
