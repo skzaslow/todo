@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  item: MyString
+  due_date: 2012-03-10
+
+two:
+  item: MyString
+  due_date: 2012-03-10
